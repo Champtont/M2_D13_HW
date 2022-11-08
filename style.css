@@ -1,0 +1,16 @@
+:root {
+  --black-: #04080f;
+  --white-: #dae3e5;
+  --blue-: #507dbc;
+  --lightblue-: #a1c6ea;
+  --evenlightblue-: #bbd1ea;
+}
+body {
+  background-image: linear-gradient(
+    45deg,
+    var(--evenlightblue-) 30%,
+    var(--blue) 70%
+  );
+  width: 100vw;
+  height: 100vh;
+}
