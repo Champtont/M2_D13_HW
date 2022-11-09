@@ -11,6 +11,29 @@ body {
     var(--evenlightblue-) 30%,
     var(--blue) 70%
   );
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+}
+#bookdis {
+  width: 70%;
+}
+#cart {
+  width: 30%;
+}
+#carthead {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--lightblue-);
+  border-bottom: solid var(--black-) 2pt;
+}
+#carthead h4 {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+#foot {
+  background-color: var(--white-);
+  height: 1em;
 }
