@@ -1,8 +1,5 @@
 const bookDiv = document.getElementById("bookrows");
 
-const addThis = () => {
-  console.log("test1");
-};
 const hideThis = (event) => {
   let btn = event.target.parentNode;
   let scard = btn.parentNode;
@@ -38,6 +35,18 @@ const displayBooks = () => {
         bookDiv.appendChild(bookCard);
         console.log(books.title); //this was a test to be sure that I am accessing properly
       });
+      //here adding add function because I need access to info from here
+      const addThis = (event) => {
+        const clickedCard = event.target.closest(".card");
+        const clickedTitle = clickedCard.querySelector("h5").innerText;
+        const Ul = document.getElementById("bookList");
+        const li = document.createElement("li");
+
+        li.innerHTML = `<li class="list-group-item">${clickedTitle}</li>`;
+        Ul.appendChild(li);
+
+        console.log("test1");
+      };
       //here I will create a loop for my btns
       const addbtn = document.querySelectorAll(".addbtn");
       const skipbtn = document.querySelectorAll(".skipbtn");
