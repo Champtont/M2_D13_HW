@@ -21,7 +21,7 @@ const displayBooks = () => {
         <img src="${books.img}" class="card-img-top img-fluid" style="width:100%; height:350px; object-fit:cover;" alt="...">
         <div class="card-body">
           <h5 class="card-title text-truncate">${books.title}</h5>
-          <p class="card-text"><span>Price:</span> ${books.price}</p>
+          <p class="card-text"><span>Price:</span><span class="price"> ${books.price}</span></p>
           <div id="btngroup" class="row">
           <div id="addbox" class="col-12">
           <button class="btn btn-primary addbtn col-12">Add</button>
@@ -39,10 +39,11 @@ const displayBooks = () => {
       const addThis = (event) => {
         const clickedCard = event.target.closest(".card");
         const clickedTitle = clickedCard.querySelector("h5").innerText;
+        const price = clickedCard.querySelector(".price").innerText;
         const Ul = document.getElementById("bookList");
         const li = document.createElement("li");
 
-        li.innerHTML = `<li class="list-group-item">${clickedTitle}</li>`;
+        li.innerHTML = `<li class="list-group-item">${clickedTitle} <span class="price">${price}<span><button class="btn btn-danger ml-3">Remove</button></li>`;
         Ul.appendChild(li);
 
         console.log("test1");
